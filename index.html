@@ -10,7 +10,9 @@
   <script src="vue.js"></script>
 
   <div id ="app">
+    <p v-once>{{message}}</p>
     <p>{{sayHi()}}</p>
+    
     <!-- <button v-on:click="reverseMessage">メッセージ反転</button> -->
   </div>
   
@@ -20,9 +22,10 @@
       data: {
         message :'Hello World!'
       },
-      methods :{
-        sayHi: function (){
-        return this.message;
+      methods: {
+        sayHi(){
+          this.message = "Hello Vue.js"
+          return "Hi"
         }
       }
     })
