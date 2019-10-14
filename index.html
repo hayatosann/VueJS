@@ -10,17 +10,14 @@
   <script src="vue.js"></script>
 
   <div id ="app">
-    <div>{{html}}</div>
-    <div v-html = "html"></div>
-    
-    <!-- <button v-on:click="reverseMessage">メッセージ反転</button> -->
+    <a v-bind:href="url">Google</a>
   </div>
   
   <script>
     new Vue({
       el: '#app',
       data: {
-        html :'<h1>h1です<h1>'
+        url :'https://google.com'
       }
     })
   </script>
