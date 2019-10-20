@@ -17,6 +17,7 @@
     </p>
     <a v-on:click.prevent="noEvent" href="https://google.com">Google</a>
     <p>X:{{x}},Y:{{y}}</p>
+    <input type ="text" v-on:keyup="myAlert">
   </div>
   
   <script>
@@ -35,6 +36,9 @@
           event.stopPropagation()
           this.x = event.clientX / divideNumber;
           this.y = event.clientY / divideNumber;
+        },
+        myAlert(){
+          alert('アラート');
         }
       }
     })
