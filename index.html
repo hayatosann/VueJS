@@ -16,10 +16,11 @@
 
   <div id ="app2">
     <p>{{message}}</p>
+    <button @click="changeMessage1">インスタンス1のmessageを変更</button>
   </div>
   
   <script>
-    var vm = new Vue({
+    var vm1 = new Vue({
       el: '#app1',
       data: {
         message: 'インスタンス1'
@@ -28,10 +29,15 @@
 
     vm.message = '書き換えられました'
 
-    new Vue({
+    var vm1 = new Vue({
       el: '#app2',
       data: {
         message: 'インスタンス2'
+      },
+      methods:{
+        changeMessage1: function() {
+          vm1.message = 'インスタンス2から変えました'
+        }
       }
     })
   </script>
