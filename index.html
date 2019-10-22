@@ -15,7 +15,10 @@
       <li v-for="(fruit, index) in fruits">({{index}}){{fruit}}</li>
     </ul>
     <ul>
-      <li v-for="(value,key) in object">{{key}}-{{value}}</li>
+      <template v-for="fruit in fruits">
+        <li>{{fruit}}</li>
+        <hr>
+      </template>
     </ul>
   </div>
   
@@ -24,11 +27,6 @@
       el: '#app',
       data: {
        fruits: ['りんご', 'ばなな', 'ぶどう'],
-       object: {
-         firstName: '太朗',
-         lastName: '田中',
-         age:27
-       }
       }
     })
   </script>
