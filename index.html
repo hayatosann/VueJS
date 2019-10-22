@@ -11,12 +11,8 @@
   <script src="vue.js"></script>
 
   <div id ="app">
-    <templete v-if="ok">
-      <p>Hello</p>
-      <p>Goodbye</p>
-      <p>おはよう</p>
-    </templete>
     <button @click="ok = !ok">ボタン</button>
+    <p v-show="ok">Show</p>
   </div>
   
   <script>
