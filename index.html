@@ -11,7 +11,7 @@
   <script src="vue.js"></script>
 
   <div id ="app">
-    <h1 :style="styleObject">Hello</h1>
+    <h1 :style="[styleObject, baseStyles]">Hello</h1>
   </div>
   
   <script>
@@ -21,8 +21,10 @@
         styleObject: {
           color: 'red',
           'background-color':'blue'
+        },
+        baseStyles:{
+          fontSize: '60px'
         }
-
       }
     })
   </script>
