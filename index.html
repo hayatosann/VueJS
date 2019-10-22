@@ -10,26 +10,17 @@
     <link rel="stylesheet" type="text/css" href="index.css">
   <script src="vue.js"></script>
 
-  <div id ="app">
-    <ul>
-      <div v-for="fruit in fruits" :key="fruit">
-        <li>{{fruit}}</li>
-        <input type="text">
-      </div>
-    </ul>
-    <button @click="remove">先頭を削除</button>
+  <div id ="app1">
+  </div>
+
+  <div id ="app2">
   </div>
   
   <script>
     new Vue({
       el: '#app',
       data: {
-       fruits: ['りんご', 'ばなな', 'ぶどう'],
-      },
-      methods:{
-        remove: function(){
-          this.fruits.shift()
-        }
+      
       }
     })
   </script>
