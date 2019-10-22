@@ -19,12 +19,14 @@
   </div>
   
   <script>
-    new Vue({
+    var vm = new Vue({
       el: '#app1',
       data: {
         message: 'インスタンス1'
       }
     })
+
+    vm.message = '書き換えられました'
 
     new Vue({
       el: '#app2',
